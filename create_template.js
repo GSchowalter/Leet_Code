@@ -2,4 +2,5 @@
 
 var fs = require("fs");
 var template_content = fs.readFileSync("template.js")
-fs.writeFileSync(process.argv[2], template_content );
+fs.mkdirSync(process.argv[2])
+fs.writeFileSync(process.argv[2] + "/" + process.argv[2] + ".js", template_content );
